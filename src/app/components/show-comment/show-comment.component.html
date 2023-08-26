@@ -1,1 +1,18 @@
-<p>show-comment works!</p>
+<div class="container mx-auto">
+  <div *ngIf="comment !== undefined" class="card" style="width: 18rem">
+    <div class="card-body">
+      <h5 class="card-title">{{ comment.title }}</h5>
+      <p class="card-text">
+        {{ comment.description }}
+      </p>
+      <p class="card-text">
+        {{ comment.author }}
+      </p>
+      <p>
+        {{ comment.createdAt }}
+      </p>
+      <a href="#" class="card-link">Hola</a>
+      <a href="#" class="card-link">Regresar</a>
+    </div>
+  </div>
+</div>

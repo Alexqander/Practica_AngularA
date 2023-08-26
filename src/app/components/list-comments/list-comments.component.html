@@ -25,10 +25,19 @@
       <td>{{ comment.author }}</td>
       <td>{{ comment.createdAt }}</td>
       <td style="width: 10%">
-        <button class="btn btn-warning btn-sm float-end">Editar</button>
+        <a
+          [routerLink]="['/showComment', comment.id]"
+          class="btn btn-warning btn-sm float-end"
+          >Editar</a
+        >
       </td>
       <td style="width: 10%">
-        <button class="btn btn-danger btn-sm float-end">Eliminar</button>
+        <button
+          class="btn btn-danger btn-sm float-end"
+          (click)="deleteComment(comment.id)"
+        >
+          Eliminar
+        </button>
       </td>
     </tr>
   </tbody>
